@@ -327,7 +327,7 @@ export class PlayerViewA {
         // if (isWait) {
         //     await this.roomHost.animationMgr.coPlay(`lobby/prefabs/mahjong/${effectName}`, this.aniPos.node);
         // } else {
-        this.roomHost.animationMgr.play(`lobby/prefabs/mahjong/${effectName}`, this.aniPos.node);
+        this.roomHost.animationMgr.play(`lobby/prefabs/guanzhang/${effectName}`, this.aniPos.node);
         // }
     }
 

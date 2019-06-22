@@ -22,15 +22,15 @@ const SOUND: { [key: number]: string } = {
 
 //特效文件定义
 const EFFECTS: { [key: number]: string } = {
-    [pokerfaceRf.CardHandType.Flush]: "Effects_zi_shunzi", //顺子
-    [pokerfaceRf.CardHandType.Bomb]: "Effects_zi_zhadan", //炸弹
+    [pokerfaceRf.CardHandType.Flush]: "Effect_zi_hang_shunzi", //顺子
+    [pokerfaceRf.CardHandType.Bomb]: "Effect_zi_hang_zhadan", //炸弹
     [pokerfaceRf.CardHandType.Single]: "", //单张
     [pokerfaceRf.CardHandType.Pair]: "", //对子
-    [pokerfaceRf.CardHandType.Pair2X]: "Effects_liandui", //连对
-    [pokerfaceRf.CardHandType.Triplet]: "Effects_sandaier", //三张
-    [pokerfaceRf.CardHandType.TripletPair]: "Effects_sandaier", //三带二
-    [pokerfaceRf.CardHandType.Triplet2X]: "Effects_zi_FeiJi", //飞机
-    [pokerfaceRf.CardHandType.Triplet2X2Pair]: "Effects_zi_FeiJiDaiChiBang" //夯加飞机
+    [pokerfaceRf.CardHandType.Pair2X]: "Effect_zi_liandui", //连对
+    [pokerfaceRf.CardHandType.Triplet]: "", //三张
+    [pokerfaceRf.CardHandType.TripletPair]: "Effect_zi_sandaier", //三带二
+    [pokerfaceRf.CardHandType.Triplet2X]: "Effect_zi_sanliandui", //飞机
+    [pokerfaceRf.CardHandType.Triplet2X2Pair]: "Effect_zi_hang_feiji" //夯加飞机
 };
 
 /**
@@ -446,6 +446,7 @@ export class PlayerA {
         playerInfoView.showUserInfoView(roomHost.getLobbyModuleLoader(), this.host, this.playerInfo, pos, this.isMe() === false);
     }
     public playSkipAnimation(): void {
+        this.playerView.playerOperationEffect("Effect_zi_buyao");
         this.playSound("gamea", "buyao");
     }
 

@@ -31,6 +31,6 @@ export namespace HandlerActionResultDiscardedA {
 
         player.hand2UI(false);
         player.discarded2UI();
-        player.showCardHandType(actionResultMsg.actionHand.cardHandType, discardTileIds[1]);
+        player.showCardHandType(actionResultMsg.actionHand.cardHandType, discardTileIds[0]);
     };
 }

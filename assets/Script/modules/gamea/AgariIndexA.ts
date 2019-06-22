@@ -125,7 +125,7 @@ export namespace AgariIndexA {
     export const tileId2ArtId = (tileID: number): number => {
         const artId = indexMap[tileID];
         if (artId == null) {
-            Logger.debug(`no art id for tile:${tileID}`);
+            // Logger.debug(`no art id for tile:${tileID}`);
             throw Error(`no art id for tile:${tileID}`);
         }
 
